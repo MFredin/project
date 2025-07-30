@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Web Template</title>
+  <title>My Playground</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">MyBrand</div>
+      <div class="logo">playground()</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -21,30 +22,45 @@
   </header>
 
   <section id="home" class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>Your success starts here.</p>
-    <a href="#features" class="cta-btn">Explore Features</a>
+    <h1>Welcome to My Digital Playground</h1>
+    <p>Experimentation. Exploration. Expression.</p>
+    <a href="#features" class="cta-btn">See What's Here</a>
   </section>
 
   <section id="features" class="features">
     <div class="feature-card">
-      <h3>Speed</h3>
-      <p>Lightning fast performance with optimized code.</p>
+      <h3>Sandbox</h3>
+      <p>Where new ideas are forged through code.</p>
     </div>
     <div class="feature-card">
-      <h3>Design</h3>
-      <p>Clean, modern, and responsive.</p>
+      <h3>Mini-Projects</h3>
+      <p>Small experiments in UI, animation, and logic.</p>
     </div>
     <div class="feature-card">
-      <h3>Support</h3>
-      <p>24/7 availability to assist your needs.</p>
+      <h3>Notes</h3>
+      <p>Thoughts on design, dev, and tech tidbits.</p>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 MyBrand. Follow us on 
-      <a href="#">Twitter</a>, <a href="#">LinkedIn</a>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a curious developer building things for the web. This site is my experimental zone — a playground to test, write, and showcase personal ideas, concepts, and micro-projects.
     </p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Playground. Made with 👨‍💻 & coffee</p>
   </footer>
 
   <script src="script.js"></script>
