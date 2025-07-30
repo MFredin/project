@@ -1,0 +1,119 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --nav-bg: #1e1e2f;
+  --nav-text: white;
+  --hero-bg: linear-gradient(to right, #00c6ff, #0072ff);
+  --card-bg: #f9f9f9;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ddd;
+  --nav-bg: #222;
+  --nav-text: #eee;
+  --hero-bg: linear-gradient(to right, #333, #111);
+  --card-bg: #1e1e1e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  padding: 1rem 2rem;
+  position: sticky; top: 0; z-index: 1000;
+}
+
+.navbar .logo { font-size: 1.5rem; font-weight: bold; }
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover { color: #00bcd4; }
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--nav-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.burger { display: none; font-size: 2rem; cursor: pointer; }
+
+.hero {
+  padding: 4rem 2rem;
+  background: var(--hero-bg);
+  text-align: center;
+  color: white;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #0072ff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover { background: #e0e0e0; }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 1rem;
+  width: 280px;
+  text-align: center;
+}
+
+footer {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer a { color: #00bcd4; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; position: absolute; top: 60px; right: 2rem; background: var(--nav-bg); flex-direction: column; padding: 1rem; border-radius: 5px; }
+  .nav-links.active { display: flex; }
+  .burger { display: block; }
+  .features { flex-direction: column; align-items: center; }
+}
